@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geolocator</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
+    <!--script src="http://maps.googleapis.com/maps/api/js"></script-->
+
+    <script src='traceurCompiler/bin/traceur.js'></script>
+    <script src='traceurCompiler/src/bootstrap.js'></script>
+    <script>
+      traceur.options.experimental = true;
+    </script>
+  </head>
+  <body>
+
+  <div id="wrapper">
+    <div id="input-area">
+      <div id="form">
+        <div class="row">
+          <div id="message"></div>
+        </div>
+
+        <div class="row">
+          <div class="attribute">
+            <label for="number">Number</label>
+          </div>
+          <div class="value">
+            <input type="text" id="number" name="number" />
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="attribute">
+            <label for="street">Street</label>
+          </div>
+          <div class="value">
+            <input type="text" id="street" name="street" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="attribute">
+            <label for="area">Area</label>
+          </div>
+          <div class="value">
+            <input type="text" id="area" name="area" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="attribute">
+            <label for="state">State</label>
+          </div>
+          <div class="value">
+            <select id="state" name="state">
+              <option value="">Select State</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="value">
+            <input type="button" id="send" name="send" value="Send" />
+          </div>
+        </div>
+      </div><!-- End of #form -->
+
+      <div id="map"> </div>
+
+      <div id="next">
+        <div class="value">
+          <input type="button" id="continue" name="continue" value="Continue>>" />
+        </div>
+      </div>
+    </div>
+
+    <div id="result">
+      <fieldset>
+        <legend>
+          <input type="radio" name="choosen" id="supplied-choice" />
+          <label for="supplied-choice">:::Use the address you supplied.</label>
+        </legend>
+        <div id="supplied-preview">
+          <div class="row">
+            <div class="attribute">
+              <label for="number">Number</label>
+            </div>
+            <div class="value">
+              <label id="number-supplied-preview" name="number-supplied-preview"></label>
+            </div>
+          </div>
+        
+          <div class="row">
+            <div class="attribute">
+              <label for="street">Street</label>
+            </div>
+            <div class="value">
+              <label id="street-supplied-preview" name="street-supplied-preview"></label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="attribute">
+              <label for="area-supplied-preview">Area</label>
+            </div>
+            <div class="value">
+              <label id="area-supplied-preview" name="area-supplied-preview"></label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="attribute">
+              <label for="state-supplied-preview">State</label>
+            </div>
+            <div class="value">
+              <label id="state-supplied-preview" name="state-supplied-preview"></label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>
+          <input type="radio" name="choosen" id="generated-choice" />
+          <label for="generated-choice">:::Use the address generated for you by the map.</label>
+        </legend>
+        <div id="generated-preview">
+          <div class="row">
+            <div class="attribute">
+              <label for="number">Number</label>
+            </div>
+            <div class="value">
+              <label id="number-generated-preview" name="number-generated-preview"></label>
+            </div>
+          </div>
+        
+          <div class="row">
+            <div class="attribute">
+              <label for="street">Street</label>
+            </div>
+            <div class="value">
+              <label id="street-generated-preview" name="street-generated-preview"></label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="attribute">
+              <label for="area-generated-preview">Area</label>
+            </div>
+            <div class="value">
+              <label id="area-generated-preview" name="area-generated-preview"></label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="attribute">
+              <label for="state-generated-preview">State</label>
+            </div>
+            <div class="value">
+              <label id="state-generated-preview" name="state-generated-preview"></label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <div class="row">
+        <div class="attribute">
+          <input type="button" id="back" name="back" value="Back" />
+        </div>
+        <!-- <div class="attribute">
+          <input type="button" id="restart" name="restart" value="Restart" />
+        </div> -->
+        <div class="attribute">
+          <input type="button" id="submit" name="submit" value="Submit" />
+        </div>
+        <div class="attribute">
+          <input type="hidden" id="latitude" name="latitude" />
+          <input type="hidden" id="longitude" name="longitude" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="lib/jquery-1.11.3.js"></script>
+    <script type="module" src="js/Geolocator.js"></script>
+  </body>
+</html>
+

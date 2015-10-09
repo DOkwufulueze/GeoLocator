@@ -1,0 +1,78 @@
+div {
+  clear: both;
+}
+
+.row {
+  margin-bottom: 30px;
+}
+
+#wrapper {
+  width: 900px;
+  margin-right: auto;  
+  margin-left: auto;
+  margin-top: 30px;
+}
+
+#form {
+  width: 400px;
+  height: 500px;
+  float: left;
+  clear: none;
+  margin-right: auto;  
+  margin-left: auto;
+}
+
+#map {
+  width: 400px;
+  height: 400px;
+  float: left;
+  clear: none;
+  display: none;
+  margin-right: auto;  
+  margin-left: auto;
+}
+
+#next {
+  display: none;
+}
+
+#details-div {
+  display: none;
+  margin-right: auto;  
+  margin-left: auto;
+}
+
+.attribute {
+  width: 120px;
+  height: 30px;
+  float: left;
+  clear: none;
+}
+
+.value {
+  width: 170px;
+  height: 30px;
+  float: left;
+  clear: none;
+}
+
+#result {
+  display: none;
+}
+
+#result fieldset {
+  clear: none;
+  float: left;
+  margin-right: 20px;
+}
+
+#search-box {
+  display: none;
+}
+
+#message {
+  display: none;
+  color: #ba3333;
+}
+
+
